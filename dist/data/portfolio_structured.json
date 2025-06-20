@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "generated_date": "2025-06-18T00:41:28.632595",
+    "version": "1.0",
+    "format": "portfolio_json"
+  },
+  "personal_info": {
+    "name": "Jeet Dagar",
+    "current_title": "DevOps Engineer & AWS Solution Architect",
+    "phone": "+91-8979548294",
+    "email": "jeetdagar42@gmail.com",
+    "location": "Bijnor, Uttar Pradesh, India",
+    "linkedin": "https://www.linkedin.com/in/jeet-dagar-0463621b7/",
+    "github": "https://github.com/JEETDAGAR",
+    "professional_summary": "Experienced DevOps Engineer and AWS Solution Architect with proven expertise in designing and implementing scalable cloud infrastructure solutions. Specialized in containerization, CI/CD automation, and infrastructure as code, with a track record of handling high-traffic applications serving 30k-40k daily users. Demonstrated success in cost optimization, achieving $2000/month savings, and improving system reliability through comprehensive monitoring solutions. Strong background in customer-facing technical advisory roles and cross-functional collaboration."
+  },
+  "education": [
+    {
+      "institution": "National Institute of Technology, Kurukshetra",
+      "degree": "Bachelor of Technology",
+      "field": "Electrical Engineering",
+      "duration": "Aug 2019 - May 2023",
+      "achievement": "CGPA: 8.7",
+      "type": "undergraduate"
+    },
+    {
+      "institution": "Jawahar Navodaya Vidyalaya, Bijnor",
+      "degree": "Senior Secondary Education (CBSE)",
+      "field": "Science",
+      "duration": "Mar 2017 - Mar 2018",
+      "achievement": "Percentage: 88.2%",
+      "type": "secondary"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Amazon Web Services (AWS)",
+      "position": "Solutions Architect",
+      "duration": "2024 - Present",
+      "location": "Remote",
+      "type": "full-time",
+      "description": "Customer-Facing Technical Advisor: Acted as the primary technical point of contact for a diverse portfolio of clients, guiding them through their cloud journey.",
+      "responsibilities": [
+        "Architectural Design and Strategy: Designed and implemented scalable, highly available, and fault-tolerant cloud solutions tailored to specific business requirements",
+        "AWS Well-Architected Reviews: Conducted comprehensive reviews of customer workloads to identify areas for improvement in cost optimization, security, reliability, performance efficiency, and operational excellence",
+        "Cross-Functional Collaboration: Worked in close partnership with sales, product, and engineering teams to ensure the successful deployment and adoption of AWS services",
+        "Continuous Learning and Enablement: Maintained deep expertise across the ever-evolving AWS platform and created technical content, such as workshops and presentations, to educate customers"
+      ],
+      "technologies": [
+        "AWS",
+        "Cloud Architecture",
+        "Well-Architected Framework",
+        "Cost Optimization",
+        "Security",
+        "Reliability"
+      ],
+      "achievements": [
+        "Guided diverse portfolio of clients through successful cloud transformation journeys",
+        "Delivered comprehensive AWS Well-Architected Reviews improving customer workload efficiency",
+        "Created technical workshops and presentations for customer education and enablement"
+      ]
+    },
+    {
+      "company": "Q3 Technologies",
+      "position": "DevOps Engineer",
+      "duration": "July 2023 - Nov 2024",
+      "location": "Gurugram",
+      "type": "full-time",
+      "description": "Senior DevOps Engineer responsible for designing and implementing scalable infrastructure solutions for high-traffic applications and enterprise clients.",
+      "projects": [
+        {
+          "name": "Western Railways Website",
+          "description": "Developed and implemented scalable infrastructure for comprehensive train service website",
+          "technologies": [
+            "Kubernetes",
+            "Helm",
+            "Terraform",
+            "AWS",
+            "Prometheus",
+            "Grafana"
+          ],
+          "achievements": [
+            "Handled 30k-40k daily users with optimal performance",
+            "Enabled scaling to support up to 5 million users using Kubernetes and Helm",
+            "Reduced deployment time by 70% using Terraform IaC",
+            "Achieved $2000/month cost reduction through optimization",
+            "Reduced MTTR by 40% with comprehensive monitoring setup"
+          ],
+          "metrics": {
+            "daily_users": "30k-40k",
+            "max_capacity": "5 million users",
+            "deployment_time_reduction": "70%",
+            "cost_savings": "$2000/month",
+            "mttr_reduction": "40%",
+            "dashboards_created": "50+",
+            "alerts_configured": "100+"
+          }
+        },
+        {
+          "name": "Childcare Website Project",
+          "description": "Developed and deployed infrastructure for childcare website with zero-downtime deployment strategies",
+          "technologies": [
+            "EC2",
+            "ALB",
+            "Route 53",
+            "S3",
+            "CloudWatch"
+          ],
+          "achievements": [
+            "Implemented Blue-Green Deployment for zero-downtime releases",
+            "Ensured high availability and performance through comprehensive monitoring",
+            "Created secure and scalable architecture with proper DNS management"
+          ]
+        },
+        {
+          "name": "Mobile Website Infrastructure",
+          "description": "Architected resilient and scalable infrastructure for mobile website",
+          "technologies": [
+            "EC2",
+            "S3",
+            "CloudFront",
+            "ELB",
+            "CloudFormation"
+          ],
+          "achievements": [
+            "Built resilient and scalable infrastructure using AWS services",
+            "Enhanced maintainability and scalability using CloudFormation",
+            "Optimized content delivery through CloudFront CDN"
+          ]
+        }
+      ]
+    }
+  ],
+  "personal_projects": [
+    {
+      "name": "End-to-End Deployment of a Three-Tier DevSecOps Project",
+      "type": "DevSecOps",
+      "description": "Comprehensive three-tier application deployment on AWS EKS with full CI/CD automation and security integration",
+      "technologies": [
+        "AWS EKS",
+        "Terraform",
+        "Jenkins",
+        "ArgoCD",
+        "Prometheus",
+        "Grafana",
+        "SonarQube",
+        "Trivy",
+        "GitHub"
+      ],
+      "key_features": [
+        "Three-tier application architecture on AWS EKS",
+        "Infrastructure as Code with Terraform",
+        "CI/CD automation with Jenkins",
+        "GitOps integration with ArgoCD",
+        "Comprehensive monitoring with Prometheus and Grafana",
+        "Security scanning with SonarQube and Trivy"
+      ],
+      "achievements": [
+        "Reduced setup time by 50% using Terraform automation",
+        "Achieved 95% deployment success rate with zero downtime",
+        "Cut manual intervention by 80% using ArgoCD",
+        "Improved issue detection time by 40% with monitoring stack",
+        "Delivered 99.9% deployment success rate"
+      ],
+      "metrics": {
+        "setup_time_reduction": "50%",
+        "deployment_success_rate": "95%",
+        "manual_intervention_reduction": "80%",
+        "issue_detection_improvement": "40%",
+        "overall_success_rate": "99.9%"
+      },
+      "github_link": "external-link-alt"
+    }
+  ],
+  "technical_skills": {
+    "Cloud Platforms": {
+      "expert": [
+        "AWS (EC2, S3, EKS, Route53, CloudFront, SSM, RDS)"
+      ],
+      "intermediate": [
+        "Azure (VM, VNet, Blob Storage)"
+      ]
+    },
+    "Containerization & Orchestration": {
+      "expert": [
+        "Kubernetes",
+        "Docker",
+        "Helm Charts"
+      ]
+    },
+    "Infrastructure as Code": {
+      "expert": [
+        "Terraform"
+      ],
+      "advanced": [
+        "CloudFormation"
+      ],
+      "intermediate": [
+        "Ansible"
+      ]
+    },
+    "CI/CD & Version Control": {
+      "expert": [
+        "Jenkins",
+        "ArgoCD"
+      ],
+      "advanced": [
+        "GitHub",
+        "Bitbucket"
+      ]
+    },
+    "Monitoring & Observability": {
+      "expert": [
+        "Prometheus",
+        "Grafana"
+      ],
+      "advanced": [
+        "CloudWatch"
+      ]
+    },
+    "Programming Languages": {
+      "intermediate": [
+        "Python",
+        "C++"
+      ]
+    },
+    "Operating Systems": {
+      "advanced": [
+        "Linux"
+      ],
+      "intermediate": [
+        "Windows"
+      ]
+    },
+    "Security & Quality": {
+      "intermediate": [
+        "SonarQube",
+        "Trivy"
+      ]
+    }
+  },
+  "certifications": [
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "platform": "AWS",
+      "type": "cloud_certification",
+      "status": "completed"
+    },
+    {
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Amazon Web Services",
+      "platform": "AWS",
+      "type": "cloud_certification",
+      "status": "completed"
+    },
+    {
+      "name": "AWS Developer Associate",
+      "issuer": "Amazon Web Services",
+      "platform": "AWS",
+      "type": "cloud_certification",
+      "status": "completed"
+    },
+    {
+      "name": "AWS AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "platform": "AWS",
+      "type": "cloud_certification",
+      "status": "completed"
+    },
+    {
+      "name": "Azure Fundamentals",
+      "issuer": "Microsoft Azure",
+      "platform": "Udemy",
+      "type": "cloud_certification",
+      "status": "completed"
+    }
+  ],
+  "leadership_experience": [
+    {
+      "role": "11th, 12th Classes Head",
+      "organization": "Shiksha Society, NIT Kurukshetra",
+      "duration": "July 2019 - May 2023",
+      "description": "Led educational initiatives for underprivileged students, supporting their overall development and academic growth",
+      "responsibilities": [
+        "Managed educational programs for 11th and 12th grade students",
+        "Coordinated with volunteers and staff to deliver quality education",
+        "Supported overall development of underprivileged students"
+      ]
+    },
+    {
+      "role": "Senior Under Officer",
+      "organization": "NCC, NIT Kurukshetra",
+      "duration": "July 2019 - May 2022",
+      "description": "Leadership role in National Cadet Corps demonstrating discipline, teamwork, and organizational skills",
+      "responsibilities": [
+        "Led cadet training programs and activities",
+        "Demonstrated leadership in military-style training environments",
+        "Developed discipline and teamwork capabilities"
+      ]
+    }
+  ],
+  "blog_posts": [
+    {
+      "title": "Securing EKS with KMS Encryption, Private Networking, and CloudWatch Logging",
+      "description": "In this post, we'll explore how to create a highly secure Amazon EKS (Elastic Kubernetes Service) cluster using eksctl. Our focus will be on key security configurations, including envelope encryption of Kubernetes secrets with AWS Key Management Service (KMS), extensive CloudWatch logging for monitoring, and private subnets for network isolation.",
+      "publication_date": "Nov 9, 2024",
+      "tags": ["EKS", "KMS", "CloudWatch Logs", "Private Networking", "CloudTrail"],
+      "url": "https://medium.com/@jeetdagar42",
+      "read_time": "8 min read"
+    },
+    {
+      "title": "Automating Web Server Deployment with Ansible",
+      "description": "A comprehensive guide to automating web server deployment using Ansible playbooks, covering best practices for infrastructure automation and configuration management.",
+      "publication_date": "Sep 21, 2024",
+      "tags": ["Ansible", "Automation", "DevOps", "Configuration Management"],
+      "url": "https://medium.com/@jeetdagar42",
+      "read_time": "6 min read"
+    }
+  ],
+  "summary_stats": {
+    "total_experience_years": "1+",
+    "total_projects": 4,
+    "key_technologies": 15,
+    "certifications_count": 5,
+    "aws_certifications_count": 4,
+    "blog_posts_count": 2
+  }
+}
