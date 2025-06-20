@@ -1,10 +1,10 @@
 [build]
 base = "modern-portfolio"
 publish = "modern-portfolio/dist"
-command = "pnpm install && rm -rf node_modules/.vite-temp && tsc -b && vite build"
+command = "pnpm build"
 
 [dev]
-command = "pnpm dev"
+command = "pnpm run dev"
 port = 5173
 targetPort = 5173
 framework = "vite"
