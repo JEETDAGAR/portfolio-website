@@ -205,14 +205,20 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
 
             {/* Action Buttons */}
             <div className="flex space-x-4 pt-4">
-              <motion.button
-                className="group flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <a
+                href="https://github.com/JEETDAGAR/DevSecOps-Kubernetes-Three-Tier-Project"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Github size={20} className="mr-2" />
-                View Code
-              </motion.button>
+                <motion.button
+                  className="group flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Github size={20} className="mr-2" />
+                  View Code
+                </motion.button>
+              </a>
               
               <motion.button
                 className="group flex items-center px-6 py-3 border border-white/20 rounded-lg font-semibold text-white hover:bg-white/10 transition-all duration-300"

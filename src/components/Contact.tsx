@@ -21,6 +21,9 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
     subject: '',
     message: ''
   });
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const contactMethods = [
     {
@@ -81,11 +84,40 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with a form service like Formspree, Netlify Forms, etc.
+    setSending(true);
+    setSuccess(null);
+    setError(null);
+
+    // Simple validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      setError('Please fill in all fields.');
+      setSending(false);
+      return;
+    }
+
+    // Use Formspree for email sending (no backend required)
+    try {
+      const response = await fetch('https://formspree.io/f/xwkgyyqg', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setSuccess('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setError('Failed to send message. Please try again later.');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -115,13 +147,13 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex justify-center">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-8 max-w-xl w-full"
           >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -220,102 +252,6 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
                 <p>• Response time: Within 24 hours</p>
               </div>
             </motion.div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="bg-slate-800/50 backdrop-blur-md rounded-2xl border border-white/10 p-8"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-white/80 font-medium mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
-                    placeholder="John Doe"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-white/80 font-medium mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-white/80 font-medium mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
-                  placeholder="Let's discuss a project"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-white/80 font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project or opportunity..."
-                />
-              </div>
-              
-              <motion.button
-                type="submit"
-                className="group relative w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold text-white overflow-hidden hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="relative z-10 flex items-center justify-center">
-                  <Send size={20} className="mr-2" />
-                  Send Message
-                </span>
-                
-                {/* Animated background */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  layoutId="button-hover"
-                />
-              </motion.button>
-            </form>
           </motion.div>
         </div>
 
