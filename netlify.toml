@@ -1,6 +1,6 @@
 [build]
-base = "modern-portfolio"
-publish = "modern-portfolio/dist"
+base = "portfolio-website"
+publish = "portfolio-website/dist"
 command = "pnpm build"
 
 [dev]
