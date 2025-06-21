@@ -1,6 +1,5 @@
 [build]
-base = "portfolio-website"
-publish = "portfolio-website/dist"
+publish = "dist"
 command = "pnpm build"
 
 [dev]
